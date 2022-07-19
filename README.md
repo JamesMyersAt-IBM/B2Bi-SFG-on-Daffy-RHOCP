@@ -15,7 +15,7 @@ Download the tar file and place it in your $HOME directory, then type:
 
 Finally, type in this command:
 
-./2-install-B2Bi-SFG-cluster.sh _AdminEmailAddress_ _ReleaseName_ _NameSpace_ _DB2aaSFlag_ _IngressSubDomain_ _<IBM-Entitlement-Key-File>_
+./2-install-B2Bi-SFG-cluster.sh _AdminEmailAddress_ _ReleaseName_ _NameSpace_ _DB2aaSFlag_ _IngressSubDomain_ _IBM-Entitlement-Key-File_
   
 Where:
 
