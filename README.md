@@ -3,6 +3,11 @@ Auto-installation scripts for IBM-Sterling B2Bi-SFG
 
 These BASH shell scripts were developed to simplify the basic installation of containers for IBM Sterling B2Bi-SFG on RHOCP.
 
+Basic assumptions:
+
+- You are using a UNIX/Linux system to install and run the scripts.
+- You have already installed the OpenShift command line utility 'oc'.
+
 Installation:
 
 Download the tar file and place it in your $HOME directory, then type:
