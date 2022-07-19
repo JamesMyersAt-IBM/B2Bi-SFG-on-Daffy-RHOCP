@@ -19,12 +19,12 @@ Finally, type in this command:
   
 Where:
   
-  _AdminEmailAddress_:        Email address of the cluster administrator.
-  _ReleaseName_:              Name of the release for this cluster install.
-  _NameSpace_:                A unique namespace prefix for the resources that will be created for this cluster.
-  _DB2aaSFlag_:               Use a DB2 service in a cloud - Y or N.
-  _IngressSubDomain_:         Cluster ingress sub-domain.
-  _IBM-Entitlement-Key-File_: Full path to a file containing your entitlement key.
+  AdminEmailAddress:        Email address of the cluster administrator.
+  ReleaseName:              Name of the release for this cluster install.
+  NameSpace:                A unique namespace prefix for the resources that will be created for this cluster.
+  DB2aaSFlag:               Use a DB2 service in a cloud - Y or N.
+  IngressSubDomain:         Cluster ingress sub-domain.
+  IBM-Entitlement-Key-File: Full path to a file containing your entitlement key.
 
   Note:
   
