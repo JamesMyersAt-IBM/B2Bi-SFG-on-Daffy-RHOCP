@@ -18,12 +18,17 @@ Finally, type in this command:
 ./2-install-B2Bi-SFG-cluster.sh _AdminEmailAddress_ _ReleaseName_ _NameSpace_ _DB2aaSFlag_ _IngressSubDomain_ _<IBM-Entitlement-Key-File>_
   
 Where:
-  
+
   AdminEmailAddress:        Email address of the cluster administrator.
+
   ReleaseName:              Name of the release for this cluster install.
+
   NameSpace:                A unique namespace prefix for the resources that will be created for this cluster.
+
   DB2aaSFlag:               Use a DB2 service in a cloud - Y or N.
+
   IngressSubDomain:         Cluster ingress sub-domain.
+
   IBM-Entitlement-Key-File: Full path to a file containing your entitlement key.
 
   Note:
