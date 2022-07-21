@@ -1,5 +1,6 @@
 # B2Bi-SFG-on-Daffy-RHOCP
-Auto-installation scripts for IBM-Sterling B2Bi-SFG
+
+Auto-installation scripts for IBM-Sterling B2Bi-SFG.
 
 These BASH shell scripts were developed to simplify the basic installation of containers for IBM Sterling B2Bi-SFG on RHOCP.
 
