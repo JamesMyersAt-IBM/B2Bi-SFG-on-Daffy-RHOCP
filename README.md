@@ -40,6 +40,6 @@ Where:
 
   IBM-Entitlement-Key-File: Full path to a file containing your entitlement key.
 
-  **Note:
+#  Note:
   
   DB2 as a Service functionality is not available yet.
