@@ -43,4 +43,3 @@ Where:
   **Note:
   
   DB2 as a Service functionality is not available yet.
-  **
