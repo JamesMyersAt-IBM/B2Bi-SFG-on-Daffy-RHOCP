@@ -8,6 +8,7 @@ Note: If you have access to IBM Techzone provision a ROKS cluster for the instal
 
 Basic assumptions:
 
+- You have an entitlement key file for access to the B2Bi/SFG software from DSW.
 - You are using a UNIX/Linux system to install and run the scripts.
 - You have already installed the OpenShift command line utility 'oc'.
 
