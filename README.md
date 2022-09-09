@@ -8,8 +8,10 @@ Note: If you have access to IBM Techzone you may provision a ROKS cluster for th
 
 ## Basic assumptions:
 
-- You have an entitlement key file for access to the B2Bi/SFG software from DSW.
 - You are using a UNIX/Linux bastion host to install and run the scripts.
+- You have an entitlement key-file for access to the IBM B2Bi/SFG software from DSW.
+- You have access to the ROKS cluster where you will be installing this software.
+- You know the ingress subdomain of the cluster where you will be installing this software.  This is available on the cluster dashboard webpage.
 
 ## Installation:
 
@@ -23,14 +25,18 @@ Note: If you have access to IBM Techzone you may provision a ROKS cluster for th
 <pre><code><b>./1-install-tools.sh</b>
 </code></pre>
 
-3. Open the web console and copy the login token, then at the shell command line use that token to log into your cluster. 
+3. Open the web console and copy the login token, then at the shell command line use that token to log into your cluster.
 
-Finally, type in this command:
+#### Example:
+
+<pre><code><b>oc</b> login --token=sha256~041TPoNcmmgheURy6d8C84edB4E6Buu2KYfXopJfyRg --server=https://c000-e.us-south.containers.cloud.ibm.com:31177</code></pre>
+
+4. Finally, type this command to begin the installation:
 
 <pre><code><b>./2-install-B2Bi-SFG-cluster.sh</b> <i>AdminEmailAddress</i> <i>ReleaseName</i> <i>NameSpace</i> <i>DB2aaSFlag</i> <i>IngressSubDomain</i> <i>IBM-Entitlement-Key-File</i></code></pre>
 
 
-## Where:
+#### Where:
 
 | Parameter                   | Description                                                                          |
 | :---                        | :---                                                                                 |
