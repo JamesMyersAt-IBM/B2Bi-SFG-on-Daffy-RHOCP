@@ -8,7 +8,7 @@ Note: If you have access to IBM Techzone you may provision a ROKS cluster for th
 
 ## Basic assumptions:
 
-- You are using a UNIX/Linux bastion host to install and run the scripts.
+- You are using a UNIX / Linux bastion host to install and run the scripts.
 - You have created a file containing your IBM software entitlement key on the bastion host.  This key will allow access to the IBM B2Bi/SFG software on the IBM Container registry during the final <b>helm</b> install process.
 - You have access to the ROKS cluster where you will be installing this software.
 - You know the ingress subdomain of the cluster where you will be installing this software.  This is available on the cluster dashboard webpage.
