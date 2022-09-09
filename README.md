@@ -15,7 +15,7 @@ Note: If you have access to IBM Techzone you may provision a ROKS cluster for th
 
 ## Installation:
 
-1. Download the tar file to your bastion host, place it in an empty directory then expand the tar file:
+1. Download the tar file to your bastion host and place it in an empty directory. Then type the following to expand the tar file:
 
 <pre><code><b>tar xvzf</b> ./Latest-Cluster-Autoinstall-Scripts.tgz
 </code></pre>
