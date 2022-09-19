@@ -1,35 +1,52 @@
-# B2Bi-SFG-on-Daffy-RHOCP
+# RHOCP-Daffy-B2Bi
 
-Auto-installation scripts for IBM-Sterling B2Bi-SFG.
+<b>Auto-installation tool for IBM-Sterling B2Bi and IBM-Sterling File Gateway containers in a clustered environment.</b>
 
-These BASH shell scripts were developed to simplify the basic installation of containers for IBM Sterling B2Bi-SFG on RHOCP.
+This tool was developed to simplify the basic installation of containers for IBM Sterling B2Bi-SFG on RedHat OpenShift Container Platform.
 
-Note: If you have access to IBM Techzone you may provision a ROKS cluster for this installation.
+## Basic assumptions / prerequisites:
 
-## Basic assumptions:
-
-- You are using a UNIX / Linux bastion host to install and run the scripts.
-- You have created a file containing your IBM software entitlement key on the bastion host.  This key will allow access to the IBM B2Bi/SFG software on the IBM Container registry during the final <b>helm</b> install process.
-- You have access to the ROKS cluster where you will be installing this software.
-- You know the ingress subdomain of the cluster where you will be installing this software.  This is available on the cluster dashboard webpage.
+- You have already installed a ROKS cluster using the [Daffy_RHOCP_Installer](https://ibm.github.io/daffy/).
+- You are using a UNIX / Linux bastion host to install and run the scripts.  The bastion host can be located in any cloud (AWS, Azure, GCP, IBM or private).  You may also be able to use your workstation as a bastion host as long as you have the rights to install software on it.
+- You have already created a file containing your IBM software entitlement key on the bastion host.  This key will allow access to the IBM B2Bi/SFG software in the IBM Container registry during the final <b>helm</b> install process.
+- You already know the ingress subdomain of the cluster where you will be installing this software.  This is available on the cluster dashboard webpage after Daffy installation.  If you are not sure where to find this information click [here](ingsub.md).
 
 ## Installation:
 
-1. Download the tar file to your bastion host and place it in an empty directory. Then type the following to expand the tar file:
+1. Verify you have a successful installation of your cluster using Daffy. After a successful installation Daffy will display a screen similar to the following:
 
-<pre><code><b>tar xvzf</b> ./Latest-Cluster-Autoinstall-Scripts.tgz
-</code></pre>
+![Successful-Daffy-Install](images/Daffy-ROKS-Success.png "Daffy-Install-Successful")
 
-2. Install the OpenShift command line tools if you haven't already done so:
+2. <b>cd</b> to the Daffy home directory and run the CloudPak / Application installer, <b>tools.sh</b>.  Be sure to add the parameter <b>"_--installibmsterlingbb2bi_"</b> to the command:
 
-<pre><code><b>./1-install-tools.sh</b>
-</code></pre>
+```bash
+root@bastion01:/data/daffy/ocp#
+root@bastion01:/data/daffy/ocp# cd /data/daffy
+#
+# pwd
+/data/daffy
+#
+# ./tools.sh --installibmsterlingbb2bi
+```
 
-3. Open the web console and copy the login token, then at the shell command line use that token to log into your cluster.
+![Install-B2Bi-Tool](images/install-b2bi-tool.png "Install-B2Bi-Tool")
 
-#### Example:
+3. Take note of the directory where the B2Bi-SFG installation tool was installed and CD to that directory:
 
-<pre><code><b>oc</b> login --token=sha256~041TPoNcmmgheURy6d8C84edB4E6Buu2KYfXopJfyRg --server=https://c000-e.us-south.containers.cloud.ibm.com:31177</code></pre>
+![Install-B2Bi-Tool](images/tool-installed.png "Install-B2Bi-Tool")
+
+4. <b>cd</b> to the directory:
+
+```bash
+root@bastion01:/data/daffy#
+root@bastion01:/data/daffy# cd /data/IBM-SterlingB2BInstaller
+#
+# pwd
+/data/IBM-SterlingB2BInstaller
+#
+```
+
+![Successful-B2Bi_SFG-Tool-Install](images/cd-2-b2bi-install.png "Successful-B2Bi_SFG-Tool-Install")
 
 4. Finally, type this command to begin the installation:
 
@@ -47,6 +64,11 @@ Note: If you have access to IBM Techzone you may provision a ROKS cluster for th
 | **IngressSubDomain:**       | *Cluster ingress sub-domain.*                                                        |
 | **IBM-Entitlement-Key-File:**| *Full path to a file containing your entitlement key.*
 
-#  Note:
-  
-  DB2 as a Service functionality is not available yet.
+
+## When the installation has completed you are ready to log in to IBM Sterling B2Bi / File Gateway.  Congratulations!
+
+
+#  Notes:
+
+- DB2 as a Service functionality is not available yet.
+- If you need to change any environment sizes (add pods, resources, etc.) you may be able to add these resources in OpenShift.  If you require different infrastructure you will need to review the Daffy install process and documentation for the necessary steps.
