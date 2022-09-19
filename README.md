@@ -1,4 +1,4 @@
-# RHOCP-Daffy-B2Bi
+# B2Bi-SFG-on-Daffy-RHOCP
 
 <b>Auto-installation tool for IBM-Sterling B2Bi and IBM-Sterling File Gateway containers in a clustered environment.</b>
 
